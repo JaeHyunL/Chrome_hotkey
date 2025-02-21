@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Shortcut to URL",
+    "version": "1.0",
+    "description": "Press a shortcut to open a predefined URL",
+    "permissions": ["tabs", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "commands": {
+      "open_url": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+1"
+        },
+        "description": "지정 페이지 이동."
+      },
+      "restore_url": {
+        "suggested_key": {
+            "default": "Ctrl+Shift+2"
+          },
+          "description": "현재 페이지로 돌아가기."
+      }
+    }
+  }
+  
