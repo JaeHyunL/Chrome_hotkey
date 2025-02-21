@@ -18,5 +18,19 @@ chrome.commands.onCommand.addListener((command) => {
         });
       }
     });
+  } else if (command === "resize_and_center") {
+    chrome.windows.getCurrent((window) => {
+      let newWidth = Math.round(350);
+      let newHeight = Math.round(350);
+      let newLeft = Math.round(610);
+      let newTop = Math.round(700);
+      
+      chrome.windows.update(window.id, {
+        width: newWidth,
+        height: newHeight,
+        left: newLeft,
+        top: newTop
+      });
+    });
   }
 });

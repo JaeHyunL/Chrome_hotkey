@@ -3,7 +3,7 @@
     "name": "Shortcut to URL",
     "version": "1.0",
     "description": "Press a shortcut to open a predefined URL",
-    "permissions": ["tabs", "storage"],
+    "permissions": ["tabs", "storage", "windows"],
     "background": {
       "service_worker": "background.js"
     },
@@ -19,7 +19,14 @@
             "default": "Ctrl+Shift+2"
           },
           "description": "현재 페이지로 돌아가기."
+      },
+      "resize_and_center": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+R"
+        },
+        "description": "딴 짓 할때;;;"
       }
+  
     }
   }
   
