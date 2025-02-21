@@ -22,7 +22,7 @@
       },
       "resize_and_center": {
         "suggested_key": {
-          "default": "Ctrl+Shift+Q"
+          "default": "Ctrl+Q"
         },
         "description": "딴 짓 할때;;;"
       }
