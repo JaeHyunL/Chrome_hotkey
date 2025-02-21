@@ -20,11 +20,11 @@ chrome.commands.onCommand.addListener((command) => {
     });
   } else if (command === "resize_and_center") {
     chrome.windows.getCurrent((window) => {
-      let newWidth = Math.round(350);
-      let newHeight = Math.round(350);
-      let newLeft = Math.round(610);
-      let newTop = Math.round(700);
-      
+      let newWidth = 350;
+      let newHeight = 350;
+      let newLeft = 610;
+      let newTop = 700;
+
       chrome.windows.update(window.id, {
         width: newWidth,
         height: newHeight,
@@ -33,13 +33,5 @@ chrome.commands.onCommand.addListener((command) => {
         top: newTop
       });
     });
-  }
-  chrome.commands.onCommand.addListener((command) => {
-    if (command === "toggle_transparency") {
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, { action: "toggle_transparency" });
-      });
-    }
-  });
-  
+  } 
 });
