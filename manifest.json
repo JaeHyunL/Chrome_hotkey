@@ -7,6 +7,13 @@
     "background": {
       "service_worker": "background.js"
     },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"], 
+        "css": ["styles.css"],
+        "js": ["content.js"]
+      }
+    ],  
     "commands": {
       "open_url": {
         "suggested_key": {
@@ -22,11 +29,16 @@
       },
       "resize_and_center": {
         "suggested_key": {
-          "default": "Ctrl+Shift+R"
+          "default": "Ctrl+Shift+Q"
         },
         "description": "딴 짓 할때;;;"
-      }
-  
+      },
+      "toggle_transparency": {
+        "suggested_key": {
+          "default": "Ctrl+Q"
+        },
+        "description": "Toggle transparency"
+      }  
     }
   }
   

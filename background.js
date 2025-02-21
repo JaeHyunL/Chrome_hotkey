@@ -28,9 +28,18 @@ chrome.commands.onCommand.addListener((command) => {
       chrome.windows.update(window.id, {
         width: newWidth,
         height: newHeight,
+        focused: false,
         left: newLeft,
         top: newTop
       });
     });
   }
+  chrome.commands.onCommand.addListener((command) => {
+    if (command === "toggle_transparency") {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, { action: "toggle_transparency" });
+      });
+    }
+  });
+  
 });
