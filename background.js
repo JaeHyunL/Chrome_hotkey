@@ -28,7 +28,6 @@ chrome.commands.onCommand.addListener((command) => {
       chrome.windows.update(window.id, {
         width: newWidth,
         height: newHeight,
-        focused: false,
         left: newLeft,
         top: newTop
       });
